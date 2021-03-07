@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 // import AdminLogin from "../views/admin/AdminLogin";
 // import AdminHome from "../views/admin/AdminHome.vue";
 
-// Front End
+// FrontEnd Routes
 import App from "../views/frontend/App";
 import FrontendHome from "../views/frontend/Home";
 import FrontendAboutMe from "../views/frontend/AboutMe";
