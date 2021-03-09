@@ -1,8 +1,8 @@
 <template>
-<div >
+<div>
     <div class="row">
             <div class="col-12 col-md-8">
-             <q-card class="my-card">
+             <q-card class="my-card " >
       <q-card-section>
         <div class="text-h5 text-bold text-red">Web Developer</div>
       </q-card-section>
@@ -127,6 +127,10 @@ export default {
 .customSize{
   font-size: 15px;
 }
+.my-card{
+  border-radius: 0;
+}
+
 /*============ 5. About Section ============*/
 
 

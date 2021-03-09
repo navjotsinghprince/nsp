@@ -1,7 +1,6 @@
-<template>
-
-	 <q-layout view="lHh Lpr lff" container class="shadow-2 rounded-borders full-height">
-      <q-header elevated class="bg-cyan-8">
+<template >
+	 <q-layout view="lHh Lpr lff" container class="full-height" >
+      <q-header class="bg-cyan-8">
         <q-toolbar>
           <!-- <q-toolbar-title>Software Engineer</q-toolbar-title> -->
       <q-toolbar inset>
@@ -15,13 +14,13 @@
         </q-toolbar>
       </q-header>
 
-      <q-drawer
+      <q-drawer 
         v-model="drawer"
         show-if-above
         :width="200"
         :breakpoint="700"
       >
-        <q-scroll-area style="height: calc(100% - 250px); margin-top: 250px; border-right: 1px solid #ddd">
+        <q-scroll-area style="height: calc(100% - 250px); margin-top: 250px;">
           <q-list padding>
 		  <router-link :to="{name: 'home'}" id="router">
             <q-item :active="false" clickable v-ripple>
@@ -123,14 +122,17 @@
           </div>
         </q-img>
       </q-drawer>
-
-   <q-page-container >
-        <q-page :style-fn="myTweak">
-	      	<!-- <Home></Home> -->
+   
+  
+   <q-page-container>
+       <q-linear-progress dark :query="true" color="cyan"  />
+        <q-page class="" :style-fn="myTweak" style="margin-top:0px;">
 		      <router-view></router-view>
         </q-page>
       </q-page-container>
+     
     </q-layout>
+
 </template>
 
 <script>
@@ -202,7 +204,8 @@ i, em {
 html, body {
   position: relative;
   height: 100%;
-  width: 100%; }
+  width: 100%; 
+ }
 
 .full-height {
   height: 100%;
