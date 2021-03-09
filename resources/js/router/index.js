@@ -12,6 +12,7 @@ import FrontendHome from "../views/frontend/Home";
 import FrontendAboutMe from "../views/frontend/AboutMe";
 import FrontendResume from "../views/frontend/Resume";
 import FrontendPortfolio from "../views/frontend/Portfolio";
+
 import FrontendBlog from "../views/frontend/Blog";
 import FrontendContact from "../views/frontend/Contact";
 import PageNotFound from "../views/frontend/404Page";
