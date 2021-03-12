@@ -26,16 +26,14 @@ const routes = [
 //Front End Routes
   {
     path: "/",
-    component: App,
-    // children: [
-    //   {
-    //     path: "/",
-    //     name: "home",
-    //     component: FrontendHome,
-    //   },
-    // ]
+    name: "home",
+    component: FrontendHome,
+    children: [
+     // { path: "/", name: "home",component: FrontendHome},
+   
+    ]
   },
-  { path: "/", name: "home", component: FrontendHome },
+  // { path: "/", name: "home", component: FrontendHome },
   { path: "/about-me", name: "AboutMe", component: FrontendAboutMe },
   { path: "/resume", name: "Resume", component: FrontendResume },
   { path: "/portfolio", name: "Portfolio", component: FrontendPortfolio },

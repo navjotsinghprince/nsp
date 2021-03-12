@@ -1,8 +1,8 @@
-<template >
-	 <q-layout view="lHh Lpr lff" container class="full-height" >
-      <q-header class="bg-cyan-8">
-        <q-toolbar>
-          <!-- <q-toolbar-title>Software Engineer</q-toolbar-title> -->
+<template>
+<div>
+	 <!-- <q-layout view="lHh Lpr lff" container class="full-height" > -->
+   <q-header class="bg-cyan-8">
+       <q-toolbar>
       <q-toolbar inset>
         <q-breadcrumbs active-color="white" style="font-size: 16px">
           <q-breadcrumbs-el clickable v-ripple label="Home" icon="home" />
@@ -104,7 +104,7 @@
             <q-btn class="q-pa-none q-ma-none"  :size="size" flat round color="secondary" icon="fab fa-twitter" />
             </q-item>
 
-             <div class="text-weight-light text-center">  
+    <div class="text-weight-light text-center">  
 				&#169; {{ new Date().getFullYear() }} 
 				By Prince<br>
             All Right Reserved</div>
@@ -122,19 +122,9 @@
           </div>
         </q-img>
       </q-drawer>
-   
-  
-   <q-page-container>
-       <q-linear-progress dark :query="true" color="cyan"  />
-        <q-page class="" :style-fn="myTweak" style="margin-top:0px;">
-		      <router-view></router-view>
-        </q-page>
-      </q-page-container>
-     
-    </q-layout>
-
-</template>
-
+</div>
+  </template>
+<!-- </q-layout> -->
 <script>
 // import Home from '../frontend/Home'
 
@@ -152,7 +142,7 @@ export default {
   },
 
    created(){
-    this.initializer();
+   // this.initializer();
    },
 
    methods: {
@@ -173,61 +163,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#dd{
-  /* display: block; */
-  color: seagreen !important;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  text-decoration: none !important;
-  list-style: none !important;
-  outline: none !important; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0; }
-
-i, em {
-  font-style: normal; }
-
-html, body {
-  position: relative;
-  height: 100%;
-  width: 100%; 
- }
-
-.full-height {
-  height: 100%;
-}
-
-hr {
-    margin: 0;
-}
-a {
-    text-decoration: none !important;
-    color:teal;
- 
-}
-.bb{
-  border:2px solid black;
-}
-.br{
-  border:2px solid red;
-}
-.bg{
-  border:2px solid green;
-}
-
-
-</style>
