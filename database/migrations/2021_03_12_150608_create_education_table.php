@@ -20,7 +20,7 @@ class CreateEducationTable extends Migration
             $table->longText('description');
             $table->date('from');
             $table->date('to')->nullable();
-            $table->tinyInteger('current')->default(0)->comment("0=finished,1=working");
+            $table->tinyInteger('current')->default(0)->comment("0=completed,1=pursuing");
             $table->foreignId('user_id');
             $table->timestamps();
         });

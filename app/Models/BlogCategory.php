@@ -5,16 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Portfolio extends Model
+class BlogCategory extends Model
 {
     use HasFactory;
-
+    protected $table = 'blog_categories';
     protected $fillable = [
-        "portfolio_category_id",
-        "title", 
-        "visit_link", 	
-        "image",
-        "user_id" ,
+        "name",
         "created_at" ,
         "updated_at"
     ];
