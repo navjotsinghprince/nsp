@@ -17,14 +17,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 
+        'name',
         'username',
+        'nickname',
         'email',
         'email_verified_at',
         'password',
         'remember_token',
         'created_at',
-        'updated_at' 	
+        'updated_at'
     ];
 
     /**
@@ -35,6 +36,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'email_verified_at',
+        'created_at',
+        'updated_at',
     ];
 
     /**
@@ -45,4 +49,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Profile()
+    {
+        return $this->hasOne(Profile::class, 'user_id', 'id');
+    }
+
+    public function Service()
+    {
+        return $this->hasMany(Service::class, 'user_id', 'id');
+    }
+
+    public function Skills()
+    {
+        return $this->hasMany(Skills::class, 'user_id', 'id');
+    }
+
+    public function Education()
+    {
+        return $this->hasMany(Education::class, 'user_id', 'id');
+    }
+
+    public function Project()
+    {
+        return $this->hasMany(Project::class, 'user_id', 'id');
+    }
 }

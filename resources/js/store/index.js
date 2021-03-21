@@ -9,20 +9,20 @@ import globalState from "./modules/global/globalState";
 // import helpers from "./modules/helpers";
 
 // Front
-import front_login from "./modules/frontend/UserLogin";
+import UserInformation from "./modules/frontend/UserInformation";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
     modules: {
-		//Global
-		globalState,
+        //Global
+        globalState,
 
         // Admin
-		// admin_login,
+        // admin_login,
 
         // Front
-        front_login,
+        UserInformation
     }
 });
 
